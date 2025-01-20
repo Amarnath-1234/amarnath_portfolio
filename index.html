@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=naDnVpQ3BNkR&format=png&color=000000" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./utility.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <nav id="nav">
+            <div class="leftnav">
+                <span>Portfolio</span>
+            </div>
+            <div class="rightnav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <button id="themeToggle"><i class="fa-solid fa-sun"></i></button>
+                </div>
+                <div class="bar_btn">
+                    <button class="bar"><a href="#"><i class="fa-solid fa-bars"></i></a></button>
+                </div>
+                
+            </div>
+        </nav>
+        <div class="popup-box">
+            <button class="close-btn"><i class="fa-solid fa-times"></i></button>
+            <ul class="popup-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <section class="home_sec" id="home">
+                <div class="lefthome">
+                    <div class="hii text">Hi, I am</div>
+                    <div class="name text">Amarnath</div>
+                    <div class="domain text">Frontend Developer</div>
+                    <p>Welcome! to my Portfolio</p>
+                    <div class="homebtn">
+                        <button class="hire btn">Hire Me</button>
+                        <a href="./resume.pdf" download><button class="resume btn">Download CV</button></a>
+                    </div>
+                </div>
+                <div class="righthome">
+                    <div class="profilepic"></div>
+                </div>
+        </section>
+
+        <section class="about_sec" id="about">
+            <h2 class="me">About Me</h2>
+            <div class="about_container">
+                <div class="leftabout">
+                    <div class="info">
+                      <h3 class="intro">My Introduction</h3>
+                      <p>I am a beginner in web development and data analysis with a passion for technology . Having knowledge in HTML, CSS, and JavaScript, with hands-on experience in data analysis tools like Excel and Power BI. Eager to leverage skills and creativity to contribute effectively to dynamic projects and drive impactful solutions.</p>
+                    </div>
+                  </div>
+                  <div class="rightabout">
+                      <div class="skill">
+                          <div class="front s_data">
+                            <h3 class="frontend skill_head">Frontend</h3>
+                            <span class="htmls">HTML</span>
+                            <span class="css">CSS</span>
+                            <span class="javascript">JavaScript</span>
+                            <span class="javascript">React</span>
+                          </div>
+                          <div class="back s_data">
+                            <h3 class="backend skill_head">Backend</h3>
+                            <span class="java">Java</span>
+                            <span class="javascript">JavaScript</span>
+                          </div>
+                          <div class="data s_data">
+                            <h3 class="database skill_head">Database</h3>
+                            <span class="sql">SQL</span>
+                            <span class="sql">MongoDB</span>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+        </section>
+
+        <section class="project_sec" id="project">
+            <h2 class="pr">Projects</h2>
+            <div class="card-con">
+                <div class="card"><span class="tag"><i class="fa-solid fa-video"></i></span><h3>Movie Recommendation System</h3>
+                    <p> In this project, I utilized machine learning to design and implement a Content-Based Movie
+                        Recommendation System.</p>
+                </div>
+                <div class="card">
+                    <span class="tag"><i class="fa-solid fa-table-columns"></i></span>
+                    <h3>E-Commerce Dashboard</h3>
+                    <p> I have created a business dashboard in Power BI which allows to analyse and visualise the data easily. </p>
+               </div>
+                <div class="card"><span class="tag"><i class="fa-solid fa-briefcase"></i></span><h3>Personal Portfolio</h3>
+                <p> Created a responsive portfolio website using
+                    HTML, CSS, and JavaScript to showcase my
+                    skills and projects.</p></div>
+            </div>
+        </section>
+
+        <section class="contactsec" id="contact">
+            <h2 class="cm">Contact Me</h2>
+            <div class="connect">
+                <div class="leftcontact">
+                    <h2 class="h-contact">Contact me for any query</h2>
+                <div class="detail">
+                    <a href="mailto:amarnathaich@gmail.com"><i class="fa-regular fa-envelope" class="link"></i>Send email</a>
+                    <a href="https://www.linkedin.com/in/amarnath-aich-8b169a221/" class="link" target="_blank"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
+                </div>
+                </div>
+                <div class="rightcontact">
+                    <div class="r-con">
+                        <div class="inputbox">
+                            <input type="text" class="form input" id="name" placeholder="Name">
+                        <input type="email" class="form input snd" id="email" placeholder="Email">
+                        </div>
+                        <div class="text">
+                            <textarea name="message"  class="form" id="message" placeholder="Message" cols="5"
+                            rows="5"></textarea>
+                        </div>
+                        <div id="send">
+                            <center><button id="btnsend">Send<i class="fa-solid fa-paper-plane"></i></button></center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer">
+                <h2>Follow Me</h2>
+                <div id="foot">
+                    <div class="col">
+                        <a href="https://www.facebook.com/amarnath.aich.56"><img src="./facebook.png"></a>
+                    </div>
+                    <div class="col">
+                        <a href="https://www.instagram.com/amarnath_107/"><img src="./instagram.png"></a>
+                    </div>
+                    
+                    <div class="col git">
+                        <a href="https://github.com/Amarnath-1234"><img src="./git1.png"></a>
+                    </div>
+                    </div>
+            </div>
+        </footer>
+        
+    </main>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
