@@ -35,3 +35,61 @@ if (userPreferredTheme === "dark") {
 } else {
     themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sendButton = document.getElementById("btnsend");
+
+    sendButton.addEventListener("click", async (e) => {
+        e.preventDefault(); // Prevent default form submission
+
+        // Get input values
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        // Validate inputs
+        if (!name || !email || !message) {
+            alert("Please fill in all the fields.");
+            return;
+        }
+
+        if (!validateEmail(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        // Prepare data in JSON format
+        const jsonData = [{
+            name: name,
+            email: email,
+            message: message,
+        },];
+
+        try {
+            // Send data to the server
+            const response = await fetch("http://localhost:5000/submit-form", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(jsonData),
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                alert("Message sent successfully: " + JSON.stringify(result));
+            } else {
+                alert("Failed to send the message. Please try again.");
+            }
+        } catch (error) {
+            console.error("Error sending data:", error);
+            alert("An error occurred. Please check your server or internet connection.");
+        }
+    });
+
+    // Email validation function
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+});

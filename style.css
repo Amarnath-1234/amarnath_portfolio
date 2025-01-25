@@ -15,10 +15,11 @@ main{
     width: 100%;
     height: 75px;
     background-color: white;
-    box-shadow: 0px 10px 10px 0px #aaa;
+    box-shadow: 0px 0px 10px 5px #aaa;
     display: flex;
     position: fixed;
     top: 0;
+    z-index: 10;
 }
 /*! Left navigation */
 .leftnav{
@@ -28,9 +29,9 @@ main{
     align-items: center;
 }
 .leftnav>span{
-    padding-left: 5rem;
+    margin-left: 5rem;
     font-weight: bold;
-    color: blueviolet;
+    color: #12b5d2;
     font-size: 1.8rem;
 }
 /*! Right navigation */
@@ -66,6 +67,10 @@ main{
     font-size: 1rem;
     border: none;
     background: none;
+}
+button:hover{
+    transition: all 1s;
+    transform: scale(1.1);
 }
 /* Navigation */
 .bar {
@@ -141,7 +146,6 @@ ul>li:hover{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    /* margin-top: 4rem; */
     padding-left: 5rem;
     font-size: 3rem;
     font-weight: bold;
@@ -211,18 +215,38 @@ h2{
     height: auto;
 }
 .profilepic{
+    position: relative;
     background-color: #1f52af;
     border-radius: 50%;
     background: linear-gradient(#74cdd8,#0e6f90,#03253d);
     background-image: url(./profile.jpg);
     background-size: cover;
-    box-shadow: 5px 5px 10px 10px rgb(58, 197, 219);
+    box-shadow: 0px 0px 10px 5px rgb(58, 197, 219);
     width: 380px;
     height: 350px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: moveInPosition 3s infinite ease-in-out;
+    z-index: -1;
+}
+@keyframes moveInPosition {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(5px, -5px);
+    }
+    50% {
+        transform: translate(0, -10px);
+    }
+    75% {
+        transform: translate(-5px, -5px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }
 
 /* ! About Section */
@@ -240,6 +264,7 @@ h2{
     text-align: center;
 }
 .about_container>.leftabout{
+    margin-top: 1rem;
     width: 50%;
     height: 100%;
     display: flex;
@@ -247,6 +272,7 @@ h2{
     padding-right: 1rem;
 }
 .intro{
+    color: black;
     padding-bottom: 1.5rem;
     text-align: center;
 }
@@ -255,18 +281,13 @@ h2{
     margin: 3rem 0;
     padding: 3rem 3rem ;
     background-color: #fff;
-    box-shadow: 5px 5px 10px 5px #cdcbcb;
+    box-shadow: 5px 5px 10px 2px #cdcbcb;
     border-radius: 10px;
     font-size: 1.1rem;
-
 }
 .info:hover{
-    background-color: #7cbdeb;
     color: white;
     transition: all 0.6s;
-}
-.info:hover p{
-    color: #1f1e1e;
 }
 
 .info p{
@@ -297,15 +318,15 @@ h2{
     padding: 0.5rem;
     width: 6rem;
     font-size: 0.9rem;
-    background-color: #2c26a6;
+    background-color: #12b5d2 ;
     border-radius: 5px;
     margin-top: 1rem;
     color: white;
     box-shadow: 5px 5px 3px 0px #aaa;
 }
 .skill span:hover{
+    transform: scale(1.07);
     background-color: #17a978;
-    color: black;
     font-weight: bold;
     transition: all .6s;
 }
@@ -319,27 +340,28 @@ h2{
 
 /* !project */
 .project_sec{
-    margin-top: 4rem;
     width: 100%;
-    height: 90vh;
+    height: auto;
     text-align: center;
 }
 .pr{
     padding: 6rem 0 0 0;
 }
 .card-con{
-    padding-top: 6rem;
+    margin: 0 auto 2.5rem auto;
+    padding-top: 2.5rem;
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     gap: 3rem;
+    flex-wrap: wrap;
 }
 .card{
-    width: 22%;
+    width: 23%;
     height: 250px;
     border-radius: 20px;
-    box-shadow: 0 5px 10px 2px #d3d3d3;
+    box-shadow: 0px 0px 7px 2px #d3d3d3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -352,7 +374,7 @@ h2{
 .tag{
 margin-bottom: 1rem;
 font-size: 3rem;
-color: #3354ca;
+color: #12b5d2;
 }
 .card h3{
     font-size: 1rem;
@@ -474,7 +496,6 @@ color: #3354ca;
 }
 
 .footer{
-    margin-top: 3.5rem;
     color: #191915;
 }
 .footer img{
@@ -504,8 +525,12 @@ color: #3354ca;
     align-items: center;
     justify-content: center;
 }
-
-
+.copyright{
+    text-align: center;
+    color: #8d8e8f;
+    margin: 1.5rem 0;
+    font-weight: bold;
+}
 
 /* Reset */
 li, a{
@@ -594,4 +619,111 @@ button:hover {
 
 .theme-toggle button:hover {
     opacity: 0.8;
+}
+
+
+
+/* General Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Home Section Animations */
+.home_sec {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.homebtn {
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+
+/* About Section Animations */
+.about_sec {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.skill {
+    display: flex;
+    gap: 20px;
+    animation: slideInRight 2s ease-in-out;
+}
+
+
+.card {
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.06);
+}
+
+/* Contact Section Animations */
+.contactsec {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.inputbox {
+    animation: zoomIn 2s ease-in-out;
+}
+
+#btnsend {
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.3s;
+}
+
+
+/* Footer Animations */
+footer {
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+footer .col img {
+    transition: transform 0.3s;
+}
+
+footer .col img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
 }
