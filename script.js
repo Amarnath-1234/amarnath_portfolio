@@ -1,4 +1,5 @@
 console.log("---");
+
 const bar = document.querySelector('.bar');
         const popupBox = document.querySelector('.popup-box');
         const closeBtn = document.querySelector('.close-btn');
