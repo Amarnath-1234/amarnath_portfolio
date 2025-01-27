@@ -29,9 +29,9 @@ main{
     align-items: center;
 }
 .leftnav>span{
+    color: #12b5d2;
     margin-left: 5rem;
     font-weight: bold;
-    color: #12b5d2;
     font-size: 1.8rem;
 }
 /*! Right navigation */
@@ -50,13 +50,6 @@ main{
     font-size: 1.1rem;
     font-weight: 600;  
 }
-.bar_btn{
-    width: 20%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .rightnav a{
     display: flex;
     text-decoration: none;
@@ -73,13 +66,26 @@ button:hover{
     transform: scale(1.1);
 }
 /* Navigation */
-.bar {
+.bar_btn{
     display: none;
+}
+.bar {
     background-color: transparent;
     border: none;
     color: black;
     font-size: 24px;
     cursor: pointer;
+}
+/* Theme Toggle Button */
+.theme-toggle {
+    height: 100%;
+    width: 20%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+#themeToggle{
+    transition: all 1s ;
 }
 
 ul>li:hover{
@@ -91,41 +97,40 @@ ul>li:hover{
 .popup-box {
     display: none;
     position: fixed;
-    top: 0;
+    top: 90px;
     right: 0;
-    height: 100%;
-    width: 200px;
-    background-color: #444;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    height: auto;
+    width: 100px;
+    /* background-color: #e22c2c; */
+    box-shadow: -2px 0 5px #d0cdcd80;
     padding: 20px;
     z-index: 1000;
 }
 
 .popup-box .close-btn {
+    position: absolute;
+    top: -5px;
+    left: -5px;
     background-color: transparent;
     border: none;
     color: white;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    display: block;
     text-align: right;
-    margin-bottom: 20px;
 }
 
-.popup-menu li {
-    margin: 15px 0;
-}
 .popup-menu{
     height: 100%;
+    margin-top: 2rem;
     display: flex;
+    gap: 1rem;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
-    padding-bottom: 4rem;
+    align-items: start;
 }
 .popup-menu li a {
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     transition: color 0.3s ease;
 }
 
@@ -318,15 +323,16 @@ h2{
     padding: 0.5rem;
     width: 6rem;
     font-size: 0.9rem;
-    background-color: #12b5d2 ;
+    background-color: #1f52af ;
     border-radius: 5px;
     margin-top: 1rem;
     color: white;
-    box-shadow: 5px 5px 3px 0px #aaa;
+    box-shadow: 5px 5px 5px 0px #7fbad7;
 }
 .skill span:hover{
     transform: scale(1.07);
     background-color: #17a978;
+    box-shadow: 3px 3px 5px 0px #9e9d9d;
     font-weight: bold;
     transition: all .6s;
 }
@@ -394,6 +400,16 @@ color: #12b5d2;
 }
 .card:hover .tag{
     color: black;
+}
+.card:hover a>h4{
+    color: #e5bd61;
+}
+.card h4{
+    border-radius: 5px;
+    border-bottom: 2px solid #dbab0e;
+    padding: 3px;
+    font-size: 16px;
+    color: #dbab0e;
 }
 
 /* ! Contact*/
@@ -594,16 +610,6 @@ button {
 
 button:hover {
     opacity: 0.9;
-}
-
-/* Theme Toggle Button */
-.theme-toggle {
-    position: absolute;
-    top: 20px;
-    right: 4rem;
-}
-#themeToggle{
-    transition: all 1s ;
 }
 
 .theme-toggle button {
