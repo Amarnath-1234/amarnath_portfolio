@@ -78,14 +78,27 @@ button:hover{
 }
 /* Theme Toggle Button */
 .theme-toggle {
-    height: 100%;
-    width: 20%;
-    justify-content: center;
-    display: flex;
-    align-items: center;
+    background-color: gray;
+    padding: 8px 15px;
+    border-radius: 5px;
+    
 }
 #themeToggle{
     transition: all 1s ;
+}
+.theme-toggle i{
+    font-size: .8rem;
+}
+.theme-toggle2{
+    background-color: rgb(164, 162, 162);
+    padding: 10px 18px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2rem;
+}
+.theme-toggle2 i{
+    font-size: 1rem;
 }
 
 ul>li:hover{
@@ -100,40 +113,39 @@ ul>li:hover{
     top: 90px;
     right: 0;
     height: auto;
-    width: 100px;
-    /* background-color: #e22c2c; */
+    width: 100%;
     box-shadow: -2px 0 5px #d0cdcd80;
     padding: 20px;
     z-index: 1000;
 }
 
-.popup-box .close-btn {
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    background-color: transparent;
+ .close-btn {
+    font-size: 24px;
     border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    text-align: right;
+    background-color: transparent;
 }
 
 .popup-menu{
     height: 100%;
-    margin-top: 2rem;
     display: flex;
-    gap: 1rem;
+    gap: 1.3rem;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: start;
+    align-items: center;
 }
+
 .popup-menu li a {
     color: white;
     font-size: 16px;
     transition: color 0.3s ease;
 }
-
+/* .theme-btn{
+    position: sticky;
+    bottom: 10px;
+    right: 10px;
+    width: 150px;
+    height: 150px;
+    background-color: #12b5d2;
+} */
 
 
 
@@ -168,7 +180,7 @@ h2{
     white-space: nowrap;
     border-right: 7px solid black;
     animation: typing 6s steps(30)infinite,
-    blink 0.8s step-end infinite;
+    blinking 0.8s step-end infinite;
   }
     
   @keyframes typing {
@@ -179,7 +191,7 @@ h2{
   
   @keyframes blinking {
     0% {border-color: transparent}
-    50% {border-color: black}
+    50% {border-color: #605f5f}
     100% {border-color: transparent}
   }
   
@@ -224,7 +236,7 @@ h2{
     background-color: #1f52af;
     border-radius: 50%;
     background: linear-gradient(#74cdd8,#0e6f90,#03253d);
-    background-image: url(./profile.jpg);
+    background-image: url(./profile.png);
     background-size: cover;
     box-shadow: 0px 0px 10px 5px rgb(58, 197, 219);
     width: 380px;
@@ -323,16 +335,14 @@ h2{
     padding: 0.5rem;
     width: 6rem;
     font-size: 0.9rem;
-    background-color: #1f52af ;
     border-radius: 5px;
     margin-top: 1rem;
-    color: white;
-    box-shadow: 5px 5px 5px 0px #7fbad7;
+    /* color: white; */
+    border: 1px solid #12b5d2;
+    box-shadow: 4px 4px 5px 0px #12b5d2;
 }
 .skill span:hover{
     transform: scale(1.07);
-    background-color: #17a978;
-    box-shadow: 3px 3px 5px 0px #9e9d9d;
     font-weight: bold;
     transition: all .6s;
 }

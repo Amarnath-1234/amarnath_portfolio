@@ -2,6 +2,14 @@
     .leftnav>span{
         margin-left: 2rem;
     }
+    @keyframes typing {
+        0% { width: 0 }
+        50% { width: 11ch }
+        100% {width: 0;}
+    }
+    .name{
+        border-right: 5px solid black;
+    }
     .lefthome .text{
         font-size: 2rem;
     }
@@ -12,7 +20,13 @@
     .bar{
         font-size: 1.2rem;
     }
-
+    .theme-toggle2{
+        padding: 8px 15px;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 2.5rem;
+        right: 2rem;
+    }
     /* about */
     .info{
         font-size: .9rem;
@@ -69,12 +83,11 @@
         width: 50%;
         justify-content: space-between;
     }
-    .theme-toggle{
-        width: 50%;
-        justify-content: start;
+    .theme-toggle2{
+       display: none;
     }
     .bar_btn{
-        width: 50%;
+        width: 100%;
         display: flex;
         justify-content: end;
     }
@@ -167,6 +180,15 @@
     .bar{
         font-size: 1.1rem;
     }
+    /* home */
+    .name{
+        border-right: 4px solid black;
+      }
+    @keyframes typing {
+        0% { width: 0 }
+        50% { width: 12ch }
+        100% {width: 0;}
+      }
     .lefthome{
         padding: 0 40px;
     }
@@ -248,12 +270,6 @@
     .footer .col a{
         padding: 2rem 1.5rem ;
     }
-    .theme-toggle {
-        right: 7rem;
-    }
-    .theme-toggle {
-        top: 25px;
-    }
     .theme-toggle button{
         padding: 3px 10px;
     }
@@ -281,3 +297,19 @@
         margin-right: 1.6rem;
     }
 } 
+
+
+
+/* Default theme toggle position for larger devices */
+/* .theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+} */
+
